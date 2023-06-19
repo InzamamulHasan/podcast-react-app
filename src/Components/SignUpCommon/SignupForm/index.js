@@ -46,7 +46,7 @@ function SignUpForm(){
 
                 const profileImageRef=ref(
                     storage,
-                    `users/${user.uid}/${Date.now()}`
+                    `users/${Date.now()}`
                 )
                 await uploadBytes(profileImageRef,profile);
                 const profileImageUrl=await getDownloadURL(profileImageRef);

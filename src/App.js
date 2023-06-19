@@ -28,12 +28,13 @@ function App() {
           (userDoc)=>{
             if(userDoc.exists()){
               const userData=userDoc.data();
+              console.log(userData);
               dispatch(
                 setUser({
                   name:userData.name,
                   email:userData.email,
-                  uid:user.uid,
-                   
+                  uid:user.uid, 
+                  profile:userData.profile     
                 })
               )
             }

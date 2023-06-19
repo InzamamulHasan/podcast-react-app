@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import Header from "../Components/Common/Header";
 import Button from "../Components/Common/Button";
@@ -8,14 +8,13 @@ import { toast } from "react-toastify";
 import Loader from "../Components/Common/Loader";
 
 let Profile=()=>{
-    let user=useSelector((state)=>state.user.user)
-    console.log("My user",user);
-
-   
+    let user=useSelector((state)=>{console.log("state",state) ;return state.user.user})
+    console.log("My user",user,user.profile);
+    
     if(!user){
         return <Loader/>;
     }
-
+    
      const handleLogout=()=>{
         signOut(auth).then(() => {
             // Sign-out successful.
@@ -29,7 +28,7 @@ let Profile=()=>{
      return<>
      <Header/>
      <div className="profile_div">
-      <img src={user.profile} className="profile-image"/>
+      {user.profile?<img src={user.profile} className="profile-image"/>:""}
         <h1>{user.name}</h1>
         <p>{user.email}</p>
         <p>User-Uid :- {user.uid}</p>
