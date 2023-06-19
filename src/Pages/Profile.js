@@ -9,7 +9,7 @@ import Loader from "../Components/Common/Loader";
 
 let Profile=()=>{
     let user=useSelector((state)=>{console.log("state",state) ;return state.user.user})
-    console.log("My user",user,user.profile);
+    console.log("My user",user);
     
     if(!user){
         return <Loader/>;
