@@ -1,0 +1,33 @@
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+}
+.links{
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    align-items: center;
+}
+.links a{
+    color:#b0c4d6;
+    text-decoration: none !important;
+}
+ .links a:hover{
+    color: white;
+    transition: all 0.3s;
+ }
+ .gradiant{
+    position: absolute;
+    width: 800px;
+    height: 150px;
+    margin: auto;
+    background:blue;
+    filter: blur(100px);
+    z-index: -1;
+   top: -120px;
+ }
+ .active{
+    color: white !important
+ }

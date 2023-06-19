@@ -1,13 +1,118 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap');
+  :root {
+    --theme: #20062e;
+    --blue: #18b2de;
+    --white: #fff;
+    --grey: #d7d7d7;
+    --purple-grey:#8f8297;
+  }
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--theme);
+  color: white;
+}
+input{
+  font-family: 'Inter', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.input-wrapper{
+  width: 70%;
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
+}
+.input-wrapper h1{
+  font-size: 1.8rem;
+  font-weight: 500;
+  padding: 1rem;
+  text-align: center;
+
+}
+.ac:hover{
+  color: rgb(0, 68, 255);
+  transition: .5s;
+}
+.logout{
+  border: 2px solid white;
+  padding: 1rem 0rem;
+  margin: auto;
+  width: 50%;
+  cursor: pointer;
+  border-radius: .30rem;
+  margin-top: 2rem;
+}
+.logout:hover{
+  background-color: white;
+  color: black;
+  font-size: 18px;
+}
+.profile_div{
+  margin: auto;
+  text-align: center;
+  margin-top: 5rem;
+  border: 2px solid rgb(76, 0, 255);
+  width: 500px;
+  padding: 2rem 0rem;
+  box-shadow: 2px 5px 10px 2px rgb(96, 110, 204);
+}
+.podcast-flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:2rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+a{
+  text-decoration: none;
+}
+.podcast-title-heading{
+  text-align: left !important;
+  width: 100%;
+}
+.banner-wrapper{
+  width: 100%;
+  min-height: 250px;
+  background: linear-gradient(
+      177.7deg,
+      rgba(58, 129 ,191, 0.3) 1.63%,
+      rgba(65, 48, 90, 0.009) 148.18%
+  );
+  border-radius: 1rem;
+  padding: .5rem;
+  opacity: 0.7;
+  height: 250px;
+  cursor: pointer;
+}
+.banner-wrapper img{
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+
+}
+.podcast-description{
+  color:var(--purple-grey);
+  text-align: left;
+  width: 100%;
+}
+.profile-image{
+  width: 40%;
+  border-radius: 30px;
+}
+.profile_div h1{
+  color: gold;
+}
+.profile_div p{
+  font-size: 18px;
+  color: #4be445;
 }
